@@ -1,5 +1,7 @@
 # QRCategories
 
+Objective-C Category-based Utility Library
+
 [![Version](http://cocoapod-badges.herokuapp.com/v/QRCategories/badge.png)](http://cocoadocs.org/docsets/QRCategories)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/QRCategories/badge.png)](http://cocoadocs.org/docsets/QRCategories)
 
@@ -23,4 +25,3 @@ Taro Kobayashi, 9re.3000@gmail.com
 ## License
 
 QRCategories is available under the MIT license. See the LICENSE file for more info.
-
