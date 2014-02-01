@@ -14,6 +14,8 @@
 		2C1FB580189CDEC60051A96E /* libQRCategories.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1FB568189CDEC60051A96E /* libQRCategories.a */; };
 		2C1FB596189CDF440051A96E /* NSString+QRQueryParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FB593189CDF440051A96E /* NSString+QRQueryParam.m */; };
 		2C1FB597189CDF440051A96E /* NSString+QRString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FB595189CDF440051A96E /* NSString+QRString.m */; };
+		2C1FB59A189CE4190051A96E /* NSString+QRQueryParamTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FB599189CE4190051A96E /* NSString+QRQueryParamTest.m */; };
+		2C1FB59D189CE9740051A96E /* NSString+QRStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FB59C189CE9740051A96E /* NSString+QRStringTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		2C1FB593189CDF440051A96E /* NSString+QRQueryParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QRQueryParam.m"; sourceTree = "<group>"; };
 		2C1FB594189CDF440051A96E /* NSString+QRString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QRString.h"; sourceTree = "<group>"; };
 		2C1FB595189CDF440051A96E /* NSString+QRString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QRString.m"; sourceTree = "<group>"; };
+		2C1FB599189CE4190051A96E /* NSString+QRQueryParamTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QRQueryParamTest.m"; sourceTree = "<group>"; };
+		2C1FB59C189CE9740051A96E /* NSString+QRStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QRStringTests.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 		2C1FB598189CE2F00051A96E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				2C1FB599189CE4190051A96E /* NSString+QRQueryParamTest.m */,
+				2C1FB59C189CE9740051A96E /* NSString+QRStringTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -209,6 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1FB59A189CE4190051A96E /* NSString+QRQueryParamTest.m in Sources */,
+				2C1FB59D189CE9740051A96E /* NSString+QRStringTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,12 +335,18 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "QRCategories/QRCategories-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "QRCategoriesTests/QRCategoriesTests-Info.plist";
+				INFOPLIST_FILE = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -348,8 +362,14 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "QRCategories/QRCategories-Prefix.pch";
-				INFOPLIST_FILE = "QRCategoriesTests/QRCategoriesTests-Info.plist";
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
