@@ -19,7 +19,7 @@
         {
             return (UIViewController *)responder;
         }
-        view = self.superview;
+        view = view.superview;
     }
     
     return nil;
