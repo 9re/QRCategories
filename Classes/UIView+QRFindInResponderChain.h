@@ -9,6 +9,6 @@
 
 @interface UIView (QRFindInResponderChain)
 
-- (instancetype)findInResponderChain:(Class)klass;
+- (id)findInResponderChain:(Class)klass;
 
 @end

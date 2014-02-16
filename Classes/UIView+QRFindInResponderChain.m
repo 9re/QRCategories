@@ -10,7 +10,7 @@
 
 @implementation UIView (QRFindInResponderChain)
 
-- (instancetype)findInResponderChain:(Class)klass
+- (id)findInResponderChain:(Class)klass
 {
     UIView *view = self;
     while (view) {
